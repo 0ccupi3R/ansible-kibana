@@ -1,15 +1,12 @@
 ---
 # Commons parameters for all ELK Stack
-es_major_version: "7.x"
-es_version: "7.13.2"
-es_use_repository: true
-es_repo_base: "https://artifacts.elastic.co"
-es_apt_key: "{{ es_repo_base }}/GPG-KEY-elasticsearch"
-es_apt_url: "deb {{ es_repo_base }}/packages/{{ es_repo_name }}/apt stable main"
-es_apt_url_old: "deb http://packages.elastic.co/elasticsearch/{{ es_repo_name }}/debian stable main"
-#Elasticsearch username and password
-es_user: kibana_system
-es_pass: elastic
+# es_major_version: "7.x"
+# es_version: "7.13.4"
+# es_use_repository: true
+# es_apt_key: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+# es_apt_url: "deb https://artifacts.elastic.co/packages/{{ es_repo_name }}/apt stable main"
+# es_apt_url_old: "deb http://packages.elastic.co/elasticsearch/{{ es_repo_name }}/debian stable main"
+
 # Kibana parameters
 kibana_install_oss: false
 kibana_package_name: "kibana"
@@ -23,8 +20,8 @@ kibana_config:
     server.port: 5601
     server.host: "{{ ansible_default_ipv4.address }}"
     elasticsearch.hosts: "http://{{ ansible_default_ipv4.address }}:9200"
-    elasticsearch.username: "{{ es_user}}"
-    elasticsearch.password: "{{ es_pass }}"
+    elasticsearch.username: "kibana"
+    elasticsearch.password: "changeme"
 
 # Need to provide default directories
 kibana_data_dirs: "/var/lib/kibana"
@@ -32,6 +29,7 @@ kibana_log_dir: "/var/log/kibana"
 kibana_allow_downgrades: false
 kibana_api_host: localhost
 kibana_api_port: 5601
+
 
 # Since ansible 2.2 the following variables need to be defined
 # to allow the role to be conditionally played with a when condition.
