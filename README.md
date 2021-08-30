@@ -149,3 +149,6 @@ To define proxy globaly, set the following variables:
 * Systemd is used for Ubuntu versions >= 15, Debian >=8, Centos >=7.  All other versions use init for service scripts.
 
 * ansible >= 2.5.0 is required.
+
+
+### Special Thanks to fedelemantuano for his work - https://github.com/fedelemantuano/ansible-kibana
