@@ -18,7 +18,7 @@ e.g.
 
 ```
 cd /my/repos/
-git clone https://github.com/fedelemantuano/ansible-kibana.git
+https://github.com/0ccupi3R/ansible-kibana.git
 cd /my/ansible/playbook
 mkdir -p roles
 ln -s /my/repos/ansible-kibana ./roles/kibana
