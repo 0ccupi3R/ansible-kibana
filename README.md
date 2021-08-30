@@ -27,7 +27,7 @@ ln -s /my/repos/ansible-kibana ./roles/kibana
 or
 
 ```
-ansible-galaxy install fedelemantuano.kibana
+ansible-galaxy install 0ccupi3r.kibana
 ```
 
 Then create your playbook yaml adding the role kibana.
