@@ -2,7 +2,7 @@
 
 # ansible-kibana
 
-**THIS ROLE IS FOR 7.x & 6.x**
+**THIS ROLE IS FOR 7.x & 6.x** By default it will setup 7.13.4
 
 Ansible role for 7.x/6.x Kibana. Currently this works on Debian and RedHat based linux systems.
 
